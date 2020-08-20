@@ -22,10 +22,12 @@ function find() {
 }
 
 function findBy(filter) {
-  return db("users")
-    .select("id", "username", "department")
-    .where(filter)
-    .orderBy("id");
+  return (
+    db("users")
+      // .select("id", "username", "department")
+      .where(filter)
+      .orderBy("id")
+  );
 }
 
 function findById(id) {
